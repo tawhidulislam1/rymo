@@ -108,7 +108,35 @@
 <br>
 <br>
 <!-- main section -->
-<section class="section">
+<div class = "main-wrapper">
+  <div class = "container">
+      <div class = "product-div">
+          <div class = "product-div-left">
+              <div class = "img-container">
+                  <img src = "img/p.jpg" alt = "watch">
+              </div>
+              <div class = "hover-container">
+                  <div><img src = "img/p.jpg"></div>
+                  <div><img src = "img/l1.png"></div>
+                  <div><img src = "img/l2.png"></div>
+                  <div><img src = "img/l3.png"></div>
+                  <div><img src = "img/l4.png"></div>
+              </div>
+          </div>
+          <div class = "product-div-right">
+              <span class = "product-name">Mac Book</span>
+              <span class = "product-price">$ 150.25</span>
+              <p class = "product-description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae animi ad minima veritatis dolore. Architecto facere dignissimos voluptate fugit ratione molestias quis quidem exercitationem voluptas.</p>
+              <div class = "btn-groups">
+                  <button type = "button" class = "add-cart-btn"><i class='bx bxs-cart'></i> add to cart</button>
+                  <button type = "button" class = "buy-now-btn"><i class='bx bxs-wallet'></i> buy now</button>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+
+<!-- <section class="section">
     <div class="row">
         <div class="col span_1_of_2 box">
             <img src="img/p.jpg" alt="" width="100%">
@@ -133,7 +161,7 @@
             <p></p>
         </div>
     </div>
-</section>
+</section> -->
 <br>
 <br>
 <footer class="footer">
@@ -201,7 +229,29 @@
  
       <!--------------custom js code ------------------->
       <script src="script.js"></script>
+<script>
+  
+const allHoverImages = document.querySelectorAll('.hover-container div img');
+const imgContainer = document.querySelector('.img-container');
 
+window.addEventListener('DOMContentLoaded', () => {
+    allHoverImages[0].parentElement.classList.add('active');
+});
+
+allHoverImages.forEach((image) => {
+    image.addEventListener('mouseover', () =>{
+        imgContainer.querySelector('img').src = image.src;
+        resetActiveImg();
+        image.parentElement.classList.add('active');
+    });
+});
+
+function resetActiveImg(){
+    allHoverImages.forEach((img) => {
+        img.parentElement.classList.remove('active');
+    });
+}
+</script>
 
 
 </body>

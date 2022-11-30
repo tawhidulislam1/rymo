@@ -1,4 +1,8 @@
-
+@media (max-width:1024px) {
+  .product-div-left {
+    padding: 10px;
+}
+}
 @media (max-width:920px) {
     nav .navbar{
       max-width: 100%;
@@ -383,4 +387,27 @@
       font-size: 16px;
     }
 
+}
+@media screen and (max-width: 992px){
+  .product-div{
+      grid-template-columns: 100%;
+  }
+  .product-div-right{
+      text-align: center;
+  }
+  .product-rating{
+      justify-content: center;
+  }
+  .product-description{
+      max-width: 400px;
+      margin-right: auto;
+      margin-left: auto;
+  }
+}
+
+@media screen and (max-width: 400px){
+  .btn-groups button{
+      width: 100%;
+      margin-bottom: 10px;
+  }
 }
